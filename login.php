@@ -44,7 +44,7 @@ include("includes/header.php");
     }
     unset($_SESSION['loginrequired']);
     ?>
-    <h2>Logga in</h2>
+    <h2>Logga in till Mina sidor</h2>
 
     <!-- Formulär för att logga in -->
     <form method="POST" action="login.php">

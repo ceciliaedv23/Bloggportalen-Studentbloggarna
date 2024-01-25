@@ -66,9 +66,9 @@ if (isset($_POST['firstname'])) {
 include("includes/header.php");
 ?>
 
-<section class="section register-flexbox">
+<section class="section grid-container-register">
     <div class="grid-register-1">
-        <h2>Registrering</h2>
+        <h2>Registrera dig här </h2>
         <p class="paragraph-structure">Fyll i nedanstående uppgifter och godkänn våra användarvillkor för att registrera ditt användarkonto.<br><br>
             Lösenordet måste bestå av minst 8 tecken varav dessa innehåller minst 1 siffra, 1 specialtecken och 1 stor bokstav.</p>
 
@@ -126,7 +126,7 @@ include("includes/header.php");
             <br>
             <p>* = Obligatoriskt</p>
             <p>Genom att klicka på "Registrera mig" godkänner du <a class="userconditions" id="userconditions">användarvillkoren.</a></p><br>
-            <input class="submit-button" type="submit" value="Registrera mig">
+            <input class="button" type="submit" value="Registrera mig">
             <?php
 
             //Felmeddelande om misslyckad registrering

@@ -20,29 +20,31 @@ if (!isset($_GET['id'])) {
 include("includes/header.php");
 ?>
 
-<section class="section singleposts">
+<section class="section-singleposts">
+    <br><br>
     <h2>Blogginlägg i sin helhet</h2>
     <br>
-    <div class="singlepost-container">
-        <?php
-        $postID = intval($_GET['id']);
+    <div class="post-container">
+    <?php
+    $postID = intval($_GET['id']);
 
-        //Aktuellt blogginlägg hämtas
-        $result = $postObject->getOneUserPost($postID);
+    //Aktuellt blogginlägg hämtas
+    $result = $postObject->getOneUserPost($postID);
 
-        //Publicering av inlägg
-        foreach ($result as $row) {
-            echo "<article>";
-            echo "<h3>" . $row['title'] . "</h3>";
-            echo "<p>" . $row['content'] . "</p>";
-            echo "<p>Bloggare: <a>" . $row['authorname'] . "</a></p>";
-            echo "<p class='article-date'>Publicerad: " . $row['postdate'] . "</p>";
-            echo "</article>";
-        }
-        ?>
+    //Publicering av inlägg
+    foreach ($result as $row) {
+        echo "<article>";
+        echo "<h3>" . $row['title'] . "</h3>";
+        echo "<p class='article-date'><i>Publicerad: " . $row['postdate'] . "</i></p>";
+        echo "<p>Författare: <a>" . $row['authorname'] . "</a></p>";
+        echo "<p>" . $row['content'] . "</p>";
+        echo "</article>";
+    }
+    ?>
     </div>
     <br>
-    <a class="link-tillbaka" href="index.php"><i class="fa-solid fa-arrow-left" style="color: #193e1d; margin-right:10px;"></i>Tillbaka till startsidan</a>
+    <a class="link-tillbaka" href="index.php">Tillbaka till startsidan</a>
+
 </section>
 
 <?php

@@ -17,13 +17,18 @@ if (!$_SESSION['successfulRegistration']) {
 include("includes/header.php");
 ?>
 
-<section class="section finishedreg">
-    <h2>Registrering godkänd</h2>
-    <a class="intro-link-button" href="login.php">Logga in</a>
-    <picture>
-        <source type="image/webp" srcset="includes/images/student2webp.webp">
-        <img src="includes/images/student2jpg.jpg" alt="">
-    </picture>
+<section class="section grid-container-register">
+    <div class="grid-register-1">
+    <h2>Perfekt! Nu är du registrerad.</h2><br><br>
+    <a class="section-intro-button" href=login.php>Logga in på Mina sidor</a><br>
+    </div>
+
+    <div class="grid-register-2">
+        <picture>
+            <source type="image/webp" srcset="includes/images/student2webp.webp">
+            <img src="includes/images/student2jpg.jpg" alt="">
+        </picture>
+    </div>
 </section>
 
 <?php

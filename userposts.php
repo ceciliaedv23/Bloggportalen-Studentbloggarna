@@ -31,7 +31,7 @@ include("includes/header.php");
 
 <section class="section section-userposts">
     <?php
-    echo "<h2> Alla blogginlägg av " . $userFullName . "</h2>";
+    echo "<h2> Alla blogginlägg av bloggaren " . $userFullName . "</h2>";
     ?>
     <div class="post-container">
 
@@ -43,9 +43,9 @@ include("includes/header.php");
             foreach ($userBlogPosts as $row) {
                 echo "<article>";
                 echo "<h3>" . $row['title'] . "</h3>";
-                echo "<p>" . $row['content'] . "</p>";
-                echo "<p>Bloggare: <a>" . $row['authorname'] . "</a></p>";
                 echo "<p class='article-date'><i>Publicerad: " . $row['postdate'] . "</i></p>";
+                echo "<p>Författare: <a>" . $row['authorname'] . "</a></p>";
+                echo "<p>" . $row['content'] . "</p>";
                 echo "</article>";
             }
         } else {
@@ -53,8 +53,7 @@ include("includes/header.php");
         }
         ?>
     </div>
-    <br>
-    <a class="link-tillbaka" href="index.php"><i class="fa-solid fa-arrow-left" style="color: #193e1d; margin-right:10px;"></i>Tillbaka till startsidan</a>
+    <a class="link-tillbaka" href="index.php">Tillbaka till startsidan</a>
 </section>
 
 <?php

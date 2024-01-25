@@ -3,11 +3,9 @@
 ?>
 
 <?php
-/* Utloggning */
-session_start();
-session_unset();
-session_destroy();
+spl_autoload_register(function ($class_name) {
+    include 'classes/' . $class_name . '.class.php';
+});
 
-header("Location: index.php");
-exit();
+session_start();
 ?>
